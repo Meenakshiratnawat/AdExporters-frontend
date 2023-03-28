@@ -1,0 +1,58 @@
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  background: #343a40;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} 
+.nav-link.active {
+  background-color: #fff !important;
+  color: green !important;
+}
+/* footer {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  left: 0px;
+  margin-top: auto;
+} */
+
+h1{
+  font-size: 18px;
+  line-height: 1.5;
+  color: green;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+
+.badge-info {
+  background-color: green;
+  color: #fff;
+}
+
+.badge-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.badge-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+

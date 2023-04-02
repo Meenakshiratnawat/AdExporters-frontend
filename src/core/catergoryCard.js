@@ -12,7 +12,7 @@ const CategoryCard = ({ category, gotoProduct = true }) => {
 
   const getARedirect = (redirect) => {
     if (redirect) {
-      return <Navigate to="/product" />;
+      return <Navigate to="/product" state={category._id} />;
     }
   };
 

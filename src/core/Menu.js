@@ -34,6 +34,16 @@ function Menu() {
           </NavLink>
         </li>
 
+        <li className="nav-item">
+          <NavLink
+            className="nav-link text-light "
+            activeClassName="active"
+            exact
+            to="/product"
+          >
+            Product
+          </NavLink>
+        </li>
         {isAutheticated() && isAutheticated().user.role === 0 && (
           <li className="nav-item">
             <NavLink

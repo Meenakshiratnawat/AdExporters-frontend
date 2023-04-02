@@ -13,6 +13,7 @@ import AddCategory from "./admin/AddCategory";
 import ManageProducts from "./admin/ManageProducts";
 import UpdateProduct from "./admin/UpdateProduct";
 import Cart from "./core/cart";
+import Product from "./core/Product";
 const AllRoutes = () => {
   return (
     <BrowserRouter>
@@ -21,6 +22,8 @@ const AllRoutes = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/product" element={<Product />} />
+
         <Route
           path="/user/dashboard"
           element={<PrivateRoute component={UserDashBoard} />}

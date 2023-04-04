@@ -5,6 +5,7 @@ import { API } from "../backend";
 import Card from "./card";
 import { getProducts } from "./helper/coreapicalls";
 import { loadCart } from "./helper/CartHelper";
+import StripeCheckout from "./StripeCheckout";
 
 const Cart = () => {
   const [products, setProducts] = useState([]);
@@ -45,7 +46,12 @@ const Cart = () => {
       <div className="row text-center">
         <div className="col-6"> {loadAllProducts()}</div>
 
-        <div className="col-6"> {loadCheckout()}</div>
+        <div className="col-6"> 
+          <StripeCheckout
+          products={products}
+          setReload={setReload}
+          />
+        </div>
       </div>
     </Base>
   );

@@ -12,7 +12,7 @@ function Menu() {
 
   return (
     <div>
-      <ul className="nav nav-tabs  ">
+      <ul className="nav nav-tabs py-3 ">
         <li className="nav-item  text-success ">
           <NavLink
             className="nav-link  text-light "

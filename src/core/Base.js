@@ -3,7 +3,7 @@ import Menu from "./Menu";
 
 const Base = ({
   title = "My Title",
-  description = "My desription",
+  // description = "My desription",
   className = " text-white p-4",
   children,
 }) => (
@@ -12,7 +12,6 @@ const Base = ({
     <div className="container-fluid">
       <div className="jumbotron  text-white text-center">
         <h2 className="display-6 py-3">{title}</h2>
-        <p className="lead">{description}</p>
       </div>
       <div className={className}>{children}</div>
     </div>
@@ -22,11 +21,6 @@ const Base = ({
           If you got any questions, feel free to reach out!
         </h5>
         <button className="btn btn-warning btn-sm ">Contact Us</button>
-      </div>
-      <div className="container">
-        <span className="text-muted">
-          <span className="text-white">An Amazing MERN Bootcamp</span>
-        </span>
       </div>
     </footer>
   </div>

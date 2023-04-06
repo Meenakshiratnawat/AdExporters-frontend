@@ -16,8 +16,8 @@ const Cart = () => {
 
   const loadAllProducts = () => {
     return (
-      <div>
-        <h2>This section is to load products</h2>
+      <div className="cart-items col-6">
+        {/* <h2>This section is to load products</h2> */}
         {products.map((product, index) => (
           <Card
             key={index}
@@ -34,7 +34,7 @@ const Cart = () => {
 
   const loadCheckout = () => {
     return (
-      <div>
+      <div className="col-6">
         <h2>This section for checkout</h2>
       </div>
     );
@@ -43,9 +43,11 @@ const Cart = () => {
   return (
     <Base title="Cart Page" description="Ready to checkout">
       <div className="row text-center">
-        <div className="col-6"> {loadAllProducts()}</div>
-
-        <div className="col-6"> {loadCheckout()}</div>
+        <div className="cart-items-image col-6"> {loadAllProducts()}</div>
+        {products.length === 0 && (
+          <div className="cart-empty">no items added</div>
+        )}
+        <div className=""> {loadCheckout()}</div>
       </div>
     </Base>
   );

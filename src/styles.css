@@ -25,7 +25,7 @@ body {
 h1{
   font-size: 18px;
   line-height: 1.5;
-  color: green;
+  /* color: green; */
 }
 
 .badge {
@@ -58,4 +58,38 @@ h1{
 card{
   background-color: #dc3545;
   color: #fff;
+}
+
+@media (min-width: 576px){
+  .home{
+    display: block;
+  
+  }
+}
+
+.cart-items{
+  margin: 30px auto;
+  width:50%;
+ 
+  border-radius: 5px;
+}
+
+.cart-empty{
+  display:flex;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.cart-items-image{
+/* width: 100px;
+height: 50px; */
+ border:2px solid black;
+margin-right: 10px;
+height:50%;
+width:50%;
+margin-bottom: 20px;
+justify-content: center;
+align-items: center;
 }

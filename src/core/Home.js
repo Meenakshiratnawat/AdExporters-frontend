@@ -5,7 +5,7 @@ import { API } from "../backend";
 import Card from "./card";
 import CategoryCard from "./catergoryCard";
 import { getProducts, getCategories } from "./helper/coreapicalls";
-
+import HomeCarousel from "./caraousel";
 const Home = () => {
   console.log("API IS", API);
   const [products, setProducts] = useState([]);
@@ -42,11 +42,12 @@ const Home = () => {
 
   return (
     <Base title="Home Page">
+      <HomeCarousel />
       <div className="row text-center">
         <div id="collection-description" class="desktop-12 tablet-6 mobile-3">
           <div class="rte">
-            <p data-mce-fragment="1">
-              <strong>About us</strong>
+            <p data-mce-fragment="1" data-mce-style="font-size:30ppx;">
+              <h2>About us</h2>
             </p>
             <p data-mce-fragment="1">
               <span data-mce-fragment="1" data-mce-style="font-weight: 600;">

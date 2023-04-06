@@ -3,12 +3,18 @@
 .nav :hover {
   border-radius: 0px;
 }
+.base {
+  font-family: "Avenir Next"
+}
 
 body {
   background: #343a40;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Avenir Next";
+  font-size: 15px;
+  
 } 
 .nav-link.active {
   background-color: #fff !important;
@@ -23,7 +29,7 @@ body {
 } */
 
 h1{
-  font-size: 18px;
+  font-size: 25px;
   line-height: 1.5;
   /* color: green; */
 }
@@ -92,4 +98,12 @@ width:50%;
 margin-bottom: 20px;
 justify-content: center;
 align-items: center;
+}
+.carousel{
+  margin-bottom: 20px;
+  height:50%;
+}
+.carousel-item img {
+  display: block;
+  margin: 0 auto;
 }

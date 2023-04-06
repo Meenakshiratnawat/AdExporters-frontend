@@ -25,7 +25,7 @@ const CategoryCard = ({ category, gotoProduct = true }) => {
       gotoProduct && (
         <button
           onClick={goToProduct}
-          className="btn btn-block btn-outline-success mt-2 mb-2"
+          className="btn btn-block btn-outline-success mt-1 mb-1"
         >
           {cartTitle}
         </button>
@@ -34,8 +34,8 @@ const CategoryCard = ({ category, gotoProduct = true }) => {
   };
 
   return (
-    <div className="card  text-white bg-dark ">
-      <div className="card-body">
+    <div className="">
+      <div className="card-body ">
         {getARedirect(redirect)}
         <CImagehelper category={category} />
       </div>

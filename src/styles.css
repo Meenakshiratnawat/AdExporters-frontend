@@ -107,3 +107,27 @@ align-items: center;
   display: block;
   margin: 0 auto;
 }
+ul li a {
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+}
+
+ul li {
+  margin-left: 0;
+  padding: 8px 0;
+}
+
+@media (max-width: 767px) {
+  ul {
+    font-size: 14px;
+  }
+  
+  ul li {
+    padding: 6px 0;
+  }
+}

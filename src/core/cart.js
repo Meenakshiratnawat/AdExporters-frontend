@@ -15,7 +15,7 @@ const Cart = () => {
     setProducts(loadCart());
   }, [reload]);
 
-  const loadAllProducts = () => {
+  const loadAllProducts = (products) => {
     return (
       <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
         <h2 className="mb-4">Cart Items</h2>
@@ -35,7 +35,7 @@ const Cart = () => {
     );
   };
 
-  const loadCheckout = () => {
+  const loadCheckout = (products) => {
     return (
       <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
         <h2 className="mb-4">Checkout</h2>
@@ -61,13 +61,13 @@ const Cart = () => {
     <Base title="Cart Page" description="Ready to checkout">
       <div className="container-fluid">
         <div className="row">
-          {loadAllProducts()}
+          {loadAllProducts(products)}
           {products.length === 0 && (
             <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
               <div className="alert alert-info mt-4">No items added</div>
             </div>
           )}
-          {loadCheckout()}
+          {loadCheckout(products)}
         </div>
       </div>
     </Base>

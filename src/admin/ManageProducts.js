@@ -38,7 +38,7 @@ const ManageProducts = () => {
       </Link>
       <div className="row">
         <div className="col-12">
-          <h2 className="text-sm-center text-white my-3">Total 3 products</h2>
+          <h2 className="text-sm-center text-white my-3">Products</h2>
 
           {products.map((product, index) => {
             return (
@@ -46,14 +46,14 @@ const ManageProducts = () => {
                 <div className="col-4">
                   <h3 className="text-white text-left">{product.name}</h3>
                 </div>
-                <div className="col-4">
+                {/* <div className="col-4">
                   <Link
                     className="btn btn-success"
                     to={`/admin/product/update/${product._id}`}
                   >
                     <span className="">Update</span>
                   </Link>
-                </div>
+                </div> */}
                 <div className="col-4">
                   <button
                     onClick={() => {

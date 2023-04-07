@@ -14,7 +14,7 @@ const AdminDashBoard = () => {
       <div className="card text-center w-85">
         <h4 className="card-header bg-dark text-white">Admin Navigation</h4>
         <ul className="list-group">
-          <li className="list-group-item ">
+          {/* <li className="list-group-item ">
             <NavLink
               exact
               to="/admin/create/category"
@@ -22,8 +22,8 @@ const AdminDashBoard = () => {
             >
               Create Categories
             </NavLink>
-          </li>
-          <li className="list-group-item">
+          </li> */}
+          {/* <li className="list-group-item">
             <NavLink
               exact
               to="/admin/categories"
@@ -31,7 +31,7 @@ const AdminDashBoard = () => {
             >
               Manage Categories
             </NavLink>
-          </li>
+          </li> */}
           <li className="list-group-item">
             <NavLink
               exact
@@ -50,7 +50,7 @@ const AdminDashBoard = () => {
               Manage Products
             </NavLink>
           </li>
-          <li className="list-group-item">
+          {/* <li className="list-group-item">
             <NavLink
               exact
               to="/admin/product/update/:productId"
@@ -58,12 +58,12 @@ const AdminDashBoard = () => {
             >
               Update Products
             </NavLink>
-          </li>
-          <li className="list-group-item">
+          </li> */}
+          {/* <li className="list-group-item">
             <NavLink exact to="/admin/orders" className="nav-link text-success">
               Manage Orders
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </div>
     );

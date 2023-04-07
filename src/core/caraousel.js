@@ -1,28 +1,99 @@
-import React from "react"
+// function HomeCarousel() {
+//   const [index, setIndex] = useState(0);
+//   const handleSelect = (selectedIndex, e) => {
+//     setIndex(selectedIndex);
+//   };
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+//   return (
+//     <Carousel activeIndex={index} onSelect={handleSelect}>
+//       {data.map((slide, i) => {
+//         return (
+//           <Carousel.Item>
+//             <img
+//               className="d-block w-50  "
+//               src={slide.image}
+//               alt="slider image"
+//             />
+//             <Carousel.Caption>
+//               <h3>{slide.caption}</h3>
+//               <p>{slide.description}</p>
+//             </Carousel.Caption>
+//           </Carousel.Item>
+//         );
+//       })}
+//     </Carousel>
+//   );
+// }
+// export default HomeCarousel;
+
+import React, { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+
+const data = [
+  {
+    image: require("./helper/categoriesp/carousel3 (1).jpg"),
+    //   caption: "Caption",
+    //   description: "Description Here",
+  },
+  {
+    image: require("./helper/categoriesp/carousel2 (1).jpg"),
+    // caption: "Caption",
+    // description: "Description Here",
+  },
+  {
+    image: require("./helper/categoriesp/carousel1.jpeg"),
+    // caption: "Caption",
+    // description: "Description Here",
+  },
+];
+
+function HomeCarousel() {
+  const [index, setIndex] = useState(0);
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
+  const isMobile = window.innerWidth <= 768;
+  const itemsToShow = isMobile ? 1 : 3;
+  const imageSize = isMobile ? "100%" : "50%";
+
+  return (
+    <Carousel
+      activeIndex={index}
+      onSelect={handleSelect}
+      interval={5000}
+      pause={false}
+      touch={true}
+      slide={true}
+      fade={false}
+      indicators={false}
+      nextLabel=""
+      prevLabel=""
+      nextIcon={
+        <span aria-hidden="true" className="carousel-control-next-icon" />
+      }
+      prevIcon={
+        <span aria-hidden="true" className="carousel-control-prev-icon" />
+      }
+    >
+      {data.map((slide, i) => {
+        return (
+          <Carousel.Item key={i}>
+            <img
+              className="d-block mx-auto"
+              src={slide.image}
+              alt="slider image"
+              style={{ width: imageSize }}
+            />
+            <Carousel.Caption>
+              <h3>{slide.caption}</h3>
+              <p>{slide.description}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        );
+      })}
+    </Carousel>
+  );
+}
+
+export default HomeCarousel;

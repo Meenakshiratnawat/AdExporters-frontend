@@ -33,7 +33,7 @@ const Card = ({
       addtoCart && (
         <button
           onClick={addToCart}
-          className="btn btn-block btn-outline-success mt-2 mb-2"
+          className="btn btn-block btn-outline-success  mt-0 mb-1"
         >
           Add to Cart
         </button>
@@ -49,24 +49,24 @@ const Card = ({
             removeItemFromCart(product._id);
             setReload(!reload);
           }}
-          className="btn btn-block btn-outline-danger mt-2 mb-2"
+          className="btn btn-block btn-outline-danger mt-0.2 mb-3 py-0"
         >
-          Remove from cart
+          Remove
         </button>
       )
     );
   };
 
   return (
-    <div className="card  text-white bg-dark border border-info ">
-      <div className="card-header lead py-1">{cartTitle}</div>
+    <div className=" text-white  ">
+      {/* <div className="card-header lead py-1">{cartTitle}</div> */}
       <div className="card-body">
         {getARedirect(redirect)}
         <ImageHelper product={product} />
-        <p className="lead bg-success font-weight-normal mt-1 text-wrap">
+        <p className="lead  font-weight-normal  text-wrap mb-1">
           {cartDescrption}
         </p>
-        <p className="btn btn-success rounded  btn-sm px-4">$ {cartPrice}</p>
+        <p className="btn btn-success rounded  btn-sm px-4">₹ {cartPrice}</p>
         <div className="row">
           <div className="col-12">{showAddToCart(addtoCart)}</div>
           <div className="col-12">{showRemoveFromCart(removeFromCart)}</div>

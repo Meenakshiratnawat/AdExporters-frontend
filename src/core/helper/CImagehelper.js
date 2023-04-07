@@ -11,12 +11,12 @@ import wodden from "../../core/helper/categoriesp/wodden.jpg";
 const CImagehelper = ({ category }) => {
   const imageurl = getImageUrl(category.name);
   return (
-    <div className="rounded border border-success p-2">
+    <div className="rounded p-0">
       <img
         src={imageurl}
         alt="photo"
         style={{ maxHeight: "50%", maxWidth: "70%" }}
-        className="mb-2 rounded "
+        className="mb-0 rounded "
       />
     </div>
   );

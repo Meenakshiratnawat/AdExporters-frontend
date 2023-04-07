@@ -3,12 +3,18 @@
 .nav :hover {
   border-radius: 0px;
 }
+.base {
+  font-family: "Avenir Next"
+}
 
 body {
   background: #343a40;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Avenir Next";
+  font-size: 15px;
+  
 } 
 .nav-link.active {
   background-color: #fff !important;
@@ -22,10 +28,14 @@ body {
   margin-top: auto;
 } */
 
-h1{
-  font-size: 18px;
-  line-height: 1.5;
-  color: green;
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  line-height: 1.2;
+  color: white;
+  text-align: center;
+  /* margin: 2rem 0; */
 }
 
 .badge {
@@ -58,4 +68,70 @@ h1{
 card{
   background-color: #dc3545;
   color: #fff;
+}
+
+@media (min-width: 576px){
+  .home{
+    display: block;
+  
+  }
+}
+
+.cart-items{
+  margin: 30px auto;
+  width:50%;
+ 
+  border-radius: 5px;
+}
+
+.cart-empty{
+  display:flex;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.cart-items-image{
+/* width: 100px;
+height: 50px; */
+ border:2px solid black;
+margin-right: 10px;
+height:50%;
+width:50%;
+margin-bottom: 20px;
+justify-content: center;
+align-items: center;
+}
+.carousel{
+  margin-bottom: 20px;
+  height:50%;
+}
+.carousel-item img {
+  display: block;
+  margin: 0 auto;
+}
+ul li a {
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+}
+
+ul li {
+  margin-left: 0;
+  padding: 8px 0;
+}
+
+@media (max-width: 767px) {
+  ul {
+    font-size: 14px;
+  }
+  
+  ul li {
+    padding: 6px 0;
+  }
 }

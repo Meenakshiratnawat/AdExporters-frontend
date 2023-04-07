@@ -5,6 +5,7 @@ import { API } from "../backend";
 import Card from "./card";
 import { getProducts } from "./helper/coreapicalls";
 import { loadCart } from "./helper/CartHelper";
+import StripeCheckout from "./StripeCheckout";
 
 const Cart = () => {
   const [products, setProducts] = useState([]);
@@ -43,7 +44,14 @@ const Cart = () => {
           <hr />
           <p>Total items: {products.length}</p>
           <p>Total price: ${products.reduce((a, b) => a + b.price, 0)}</p>
-          <button className="btn btn-primary">Place Order</button>
+          <button className="btn btn-primary">
+          <div className="col-6"> 
+          <StripeCheckout
+          products={products}
+          setReload={setReload}
+          />
+        </div>
+          </button>
         </div>
       </div>
     );

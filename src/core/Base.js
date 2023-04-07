@@ -61,11 +61,11 @@ const Base = ({
           <div className="col-md-4">
             <h4>CONTACT US</h4>
             <p>
-              Email: Alluringdesignexporters@gmail.com
+              Email: alluringdesignexporters@gmail.com
               <br />
               Phone: 8619233925
               <br />
-              Address:94 b Tejaji nagar , gopalpura 302015, jaipur , Rajasthan
+              Address: 94 B Tejaji nagar, Gopalpura, 302015, Jaipur, Rajasthan
             </p>
           </div>
         </div>

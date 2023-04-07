@@ -178,7 +178,7 @@ function Menu() {
               exact
               to="/user/dashboard"
             >
-              U.Dashboard
+              Dashboard
             </NavLink>
           </li>
         )}

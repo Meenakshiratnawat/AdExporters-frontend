@@ -33,9 +33,9 @@ const Product = () => {
   }, []);
 
   return (
-    <Base title="Home Page" description="Welcome to the T-shirt store">
+    <Base title="All of Products" description="Welcome to the T-shirt store">
       <div className="row text-center">
-        <h1 className="text-white">All of products</h1>
+        {/* <h1 className="text-white">All of Products</h1> */}
         <div className="row">
           {products.map((product, index) => {
             return (

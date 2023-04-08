@@ -23,7 +23,8 @@ const CategoryCard = ({ category, gotoProduct = true }) => {
   const showCategoryName = (gotoProduct) => {
     return (
       gotoProduct && (
-        <button className="btn btn-outline-success rounded-3 px-4 py-2 my-3"
+        <button
+          className="btn btn-outline-success rounded-3 px-1 py-1 my-3"
           onClick={goToProduct}
         >
           {cartTitle}

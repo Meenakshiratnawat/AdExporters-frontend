@@ -37,20 +37,17 @@ const Cart = () => {
 
   const loadCheckout = (products) => {
     return (
-      <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
-        <h2 className="mb-4">Checkout</h2>
-        <div className="card p-4">
+      <div className="col-lg-6 col-md-8 col-sm-10 ">
+        <h2 className="mb-4  ">Checkout</h2>
+        <div className="card">
           <h4>Order Summary</h4>
           <hr />
           <p>Total items: {products.length}</p>
           <p>Total price: ${products.reduce((a, b) => a + b.price, 0)}</p>
           <button className="btn btn-primary">
-          <div className="col-6"> 
-          <StripeCheckout
-          products={products}
-          setReload={setReload}
-          />
-        </div>
+            <div className="col-6">
+              <StripeCheckout products={products} setReload={setReload} />
+            </div>
           </button>
         </div>
       </div>
@@ -63,8 +60,8 @@ const Cart = () => {
         <div className="row">
           {loadAllProducts(products)}
           {products.length === 0 && (
-            <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
-              <div className="alert alert-info mt-4">No items added</div>
+            <div className="col-lg-6 col-md-8 col-sm-10 ">
+              <div className="alert alert-info">No items added</div>
             </div>
           )}
           {loadCheckout(products)}

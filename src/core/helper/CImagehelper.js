@@ -15,8 +15,8 @@ const CImagehelper = ({ category }) => {
       <img
         src={imageurl}
         alt="photo"
-        style={{ maxHeight: "50%", maxWidth: "70%" }}
-        className="mb-0 rounded "
+        style={{ maxWidth: "100%", height: "auto", maxHeight: "50vh" }}
+        className="mb-0 rounded"
       />
     </div>
   );

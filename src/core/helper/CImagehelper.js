@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Redirect, Link, NavLink, Navigate } from "react-router-dom";
 import anim_scl from "../../core/helper/categoriesp/animal sclupture.jpg";
 import brass from "../../core/helper/categoriesp/brass.jpg";
 import handicraft from "../../core/helper/categoriesp/handicraft.jpg";
@@ -9,16 +10,41 @@ import wodden from "../../core/helper/categoriesp/wodden.jpg";
 
 //import { API } from "../../backend";
 const CImagehelper = ({ category }) => {
+  const [redirect, setRedirect] = useState(false);
+  const cartTitle = category ? category.name : "A photo from pexels";
+
+  const getARedirect = (redirect) => {
+    if (redirect) {
+      return <Navigate to="/product" state={category._id} />;
+    }
+  };
+
+  const goToProduct = () => {
+    setRedirect(true);
+  };
+
   const imageurl = getImageUrl(category.name);
   return (
-    <div className="rounded p-0">
-      <img
-        src={imageurl}
-        alt="photo"
-        style={{ maxWidth: "100%", height: "auto", maxHeight: "50vh" }}
-        className="mb-0 rounded"
-      />
+<div className="rounded p-0">
+<div className="rounded p-0">
+  <div className="position-relative">
+  {getARedirect(redirect)}
+    <img
+      src={imageurl}
+      alt="photo"
+      style={{ maxWidth: "100%", height: "auto", maxHeight: "50vh", transition: "transform 0.5s" }}
+      className="rounded hover-zoom"
+      onClick={goToProduct}
+    />
+    <div className="hover-title position-absolute text-center">
+      <h5 style={{fontSize: "1.5rem"}}>{cartTitle}</h5>
     </div>
+  </div>
+</div>
+
+</div>
+
+
   );
 };
 

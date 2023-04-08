@@ -33,7 +33,7 @@ const Card = ({
       addtoCart && (
         <button
           onClick={addToCart}
-          className="btn btn-block btn-outline-success  mt-0 mb-1"
+          className="btn btn-block btn-outline-success  my-1"
         >
           Add to Cart
         </button>
@@ -49,31 +49,59 @@ const Card = ({
             removeItemFromCart(product._id);
             setReload(!reload);
           }}
-          className="btn btn-block btn-outline-danger mt-0.2 mb-3 py-0"
+          className="btn btn-block btn-outline-danger my-1"
         >
-          Remove
+          Remove From Cart
         </button>
       )
     );
   };
 
   return (
-    <div className=" text-white  ">
-      {/* <div className="card-header lead py-1">{cartTitle}</div> */}
-      <div className="card-body">
+    <div className=" text-white  d-flex flex-column align-items-center justify-content-center">
+      {/* <div className="card-body"> */}
         {getARedirect(redirect)}
         <ImageHelper product={product} />
-        <p className="lead  font-weight-normal  text-wrap mb-1">
-          {cartDescrption}
-        </p>
-        <p className="btn btn-success rounded  btn-sm px-4">₹ {cartPrice}</p>
+        <p className="lead font-weight-normal text-center my-1">
+    {cartTitle}
+  </p>
+  <p className="btn btn-success rounded btn-sm px-4 mb-1">₹ {cartPrice}</p>
         <div className="row">
           <div className="col-12">{showAddToCart(addtoCart)}</div>
+        </div>
+        <div className="row">
           <div className="col-12">{showRemoveFromCart(removeFromCart)}</div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };
+
+{/* <div className="text-white d-flex flex-column align-items-center justify-content-center">
+  {getARedirect(redirect)}
+  <div className="d-flex justify-content-center align-items-center" style={{ width: "300px", height: "200px" }}>
+    <img
+      src={imageurl}
+      alt="photo"
+      style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform 0.5s" }}
+      className="rounded hover-zoom"
+    />
+  </div>
+  <p className="lead font-weight-normal text-center my-1">
+    {cartTitle}
+  </p>
+  <p className="btn btn-success rounded btn-sm px-4 mb-1">₹ {cartPrice}</p>
+  <div className="row">
+    <div className="col-12">
+      <button
+        onClick={addToCart}
+        className="btn btn-block btn-outline-success my-1"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div> */}
+
 
 export default Card;

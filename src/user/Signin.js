@@ -6,8 +6,8 @@ import { Navigate } from "react-router-dom";
 
 const Signin = () => {
   const [values, setValues] = useState({
-    email: "d@gmail.com",
-    encry_password: "123456",
+    email: "",
+    encry_password: "",
     error: "",
     loading: false,
     didRedirect: false,
@@ -115,13 +115,11 @@ const Signin = () => {
   };
 
   return (
-    <Base title="Sign In page" description="A page for user to sign In!">
+    <Base title="Sign In Page" description="A page for user to sign In!">
       {loadingMessage()}
       {errorMessage()}
       {signInForm()}
       {performRedirect()}
-
-      <p className="text-white text-center">{JSON.stringify(values)}</p>
     </Base>
   );
 };

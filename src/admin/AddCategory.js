@@ -74,7 +74,7 @@ const AddCategory = () => {
   return (
     <Base
       title="Create a category here"
-      description="Add a new category for new tshirts"
+      description="Add a new category"
       className="container-sm bg-info p-4"
     >
       <div className="row bg-white rounded  ">

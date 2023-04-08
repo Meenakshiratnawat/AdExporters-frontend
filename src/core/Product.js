@@ -33,18 +33,23 @@ const Product = () => {
   }, []);
 
   return (
-    <Base title="All of Products" description="Welcome to the T-shirt store">
+    <Base title="Products" description="Welcome to the adex">
       <div className="row text-center">
-        {/* <h1 className="text-white">All of Products</h1> */}
-        <div className="row">
-          {products.map((product, index) => {
-            return (
-              <div key={index} className="col-4 mb-4">
-                <Card product={product} />
-              </div>
-            );
-          })}
+      {products.length === 0 ? (
+    <div className="col-12">
+      <p>No products found in this category. Please explore other categories.</p>
+    </div>
+  ) : (
+    <div className="row justify-content-between">
+    {products.map((product, index) => {
+      return (
+        <div key={index} className="col-4 mb-5">
+          <Card product={product} />
         </div>
+      );
+    })}
+  </div>
+      )}
       </div>
     </Base>
   );

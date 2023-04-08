@@ -42,38 +42,17 @@ const Home = () => {
     <Base title="ADEX EXPORTERS">
       <HomeCarousel />
       <div className="container my-3">
-        {/* <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <div className="text-center mb-5">
-              <h2>About us</h2>
-            </div>
-            <div
-              className="text-center mb-5 about-us"
-              style={{ fontFamily: "Arial" }}
-            >
-              <h1>
-                Since 1960, we "Alluring Design Exporters", is a leading
-                Manufacturer, Wholesaler and Exporter of marble Sculptures,
-                Temples and Other handicraft items. We are unique mix of talent
-                and meticulousness in the quest for excellence. We are sculpting
-                the finest grade of marble idols with detail that will hold you
-                spellbound with their mesmerising beauty, representing a true
-                reflection of craftsmanship, Indian values and culture.
-              </h1>
-            </div>
-          </div>
-        </div> */}
-
         <h2 className="text-center text-white mb-5">Categories</h2>
-        <div className="row justify-content-center">
-          {categories.map((category, index) => {
-            return (
-              <div key={index} className="col-6 mb-4">
-                <CategoryCard category={category} />
-              </div>
-            );
-          })}
-        </div>
+        <div className="d-flex flex-wrap justify-content-center">
+  {categories.map((category, index) => {
+    return (
+      <div key={index} className="m-3">
+        <CategoryCard category={category} />
+      </div>
+    );
+  })}
+</div>
+
       </div>
       <div className="row justify-content-center">
         <div className="col-lg-8">

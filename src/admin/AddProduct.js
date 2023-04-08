@@ -175,7 +175,7 @@ const AddProduct = () => {
   return (
     <Base
       title="Add a Product here"
-      description="Add a new Product for new tshirts"
+      description="Add a new Product"
       className="container-sm bg-info py-4 "
     >
       <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">

@@ -36,10 +36,10 @@ const CategoryCard = ({ category, gotoProduct = true }) => {
   return (
     <div className="">
       <div className="card-body ">
-        {getARedirect(redirect)}
+        {/* {getARedirect(redirect)} */}
         <CImagehelper category={category} />
       </div>
-      <div className="col-12">{showCategoryName(goToProduct)}</div>
+      {/* <div className="col-12">{showCategoryName(goToProduct)}</div> */}
     </div>
   );
 };

@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <Base title="ADEX EXPORTERS">
       <HomeCarousel />
-      <div className="container my-5">
+      <div className="container my-3">
         {/* <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="text-center mb-5">
@@ -77,11 +77,11 @@ const Home = () => {
       </div>
       <div className="row justify-content-center">
         <div className="col-lg-8">
-          <div className="text-center mb-5">
+          <div className="text-center mb-2">
             <h2>About us</h2>
           </div>
           <div
-            className="text-center mb-5 about-us"
+            className="text-center mb-3 about-us"
             style={{ fontFamily: "Arial" }}
           >
             <h1>

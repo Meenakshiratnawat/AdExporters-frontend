@@ -46,7 +46,7 @@ const Cart = () => {
     <Base title="Cart" description="Ready to checkout">
       <div className="container-fluid">
         <div className="row align-items-center justify-content-center">
-        {products.length === 0 ? (
+        {products==null || products.length === 0 ? (
           <div className="col-lg-6 col-md-8 col-sm-10 text-center" style={{ fontSize: "24px" }}>
           Cart is empty, please add items in the cart.
           </div>

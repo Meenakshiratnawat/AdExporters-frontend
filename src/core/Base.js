@@ -18,7 +18,7 @@ const Base = ({
     <footer className="footer bg-success text-white py-3">
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 text-center">
             <div className="footer-sect">
               <h4>SHIPPING &amp; RETURNS</h4>
               <ul>
@@ -38,7 +38,7 @@ const Base = ({
               </ul>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 text-center">
             <h4>HELP</h4>
             <ul className="list-unstyled">
               <li>
@@ -53,12 +53,9 @@ const Base = ({
               <li>
                 <a href="#">Refund Policy</a>
               </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
             </ul>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 text-center">
             <h4>CONTACT US</h4>
             <p>
               Email: alluringdesignexporters@gmail.com

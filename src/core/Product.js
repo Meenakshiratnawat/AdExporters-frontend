@@ -43,7 +43,7 @@ const Product = () => {
     <div className="row justify-content-between">
     {products.map((product, index) => {
       return (
-        <div key={index} className="col-4 mb-5">
+        <div key={index} className="col-sm-6 col-md-4 mb-5">
           <Card product={product} />
         </div>
       );

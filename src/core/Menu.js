@@ -225,7 +225,7 @@ function Menu() {
                 to="/signin
 "
               >
-                Sign In
+                Signin
               </NavLink>
             </li>
           </Fragment>

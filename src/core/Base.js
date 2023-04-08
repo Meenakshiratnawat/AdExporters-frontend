@@ -15,11 +15,11 @@ const Base = ({
       </div>
       <div className={`container ${className}`}>{children}</div>
     </div>
-    <footer className="footer bg-success text-white py-3">
+    <footer className="footer bg-success text-white py-0">
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <div className="footer-sect">
+            <div className="col-md-4 text-center mt-2">
               <h4>SHIPPING &amp; RETURNS</h4>
               <ul>
                 <li>
@@ -38,7 +38,7 @@ const Base = ({
               </ul>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 text-center">
             <h4>HELP</h4>
             <ul className="list-unstyled">
               <li>
@@ -53,19 +53,19 @@ const Base = ({
               <li>
                 <a href="#">Refund Policy</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#">Contact Us</a>
-              </li>
+              </li> */}
             </ul>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 text-center">
             <h4>CONTACT US</h4>
             <p>
               Email: Alluringdesignexporters@gmail.com
               <br />
               Phone: 8619233925
               <br />
-              Address:94 b Tejaji nagar , gopalpura 302015, jaipur , Rajasthan
+              Address: 94B Tejaji Nagar, Gopalpura, Jaipur 302015, Rajasthan
             </p>
           </div>
         </div>

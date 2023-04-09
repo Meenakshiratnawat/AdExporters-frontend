@@ -39,24 +39,23 @@ const Home = () => {
   }, []);
 
   return (
-    <Base title="ADEX EXPORTERS">
+    <Base title="AD EXPORTERS">
       <HomeCarousel />
       <div className="container my-3">
-        <h2 className="text-center text-white mb-5">Categories</h2>
+        <h2 className="text-center text-white mb-3">Categories</h2>
         <div className="d-flex flex-wrap justify-content-center">
-  {categories.map((category, index) => {
-    return (
-      <div key={index} className="m-3">
-        <CategoryCard category={category} />
-      </div>
-    );
-  })}
-</div>
-
+          {categories.map((category, index) => {
+            return (
+              <div key={index} className="m-3">
+                <CategoryCard category={category} />
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className="row justify-content-center">
         <div className="col-lg-8">
-          <div className="text-center mb-2">
+          <div className="text-center mb-2 mt-2">
             <h2>About us</h2>
           </div>
           <div

@@ -55,8 +55,17 @@ const Home = () => {
       </div>
       <div className="row justify-content-center">
         <div className="col-lg-8">
-          <div className="text-center mb-2 mt-2">
-            <h2>About us</h2>
+          <div className="text-center mb-2 mt-4">
+            <h2 style={{ fontFamily: "Arial" }}>About us</h2>
+          </div>
+
+          <div className="text-center mb-3 ">
+            <img
+              src="about us.jpg"
+              alt="About us"
+              style={{ maxWidth: "100%", height: "auto", maxHeight: "50vh" }}
+              className="rounded"
+            />
           </div>
           <div
             className="text-center mb-3 about-us"

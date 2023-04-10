@@ -60,7 +60,7 @@ const Base = ({
             <p>
               Email: alluringdesignexporters@gmail.com
               <br />
-              Phone: 7792823718
+              Phone: +91-7792823718
               <br />
               Address: 94 B Tejaji nagar, Gopalpura, 302015, Jaipur, Rajasthan
             </p>

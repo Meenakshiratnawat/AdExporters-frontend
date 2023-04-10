@@ -61,8 +61,8 @@ const Home = () => {
 
           <div className="text-center mb-3 ">
             <img
-              src="about us.jpg"
-              alt="About us"
+              src="about_us.jpg"
+              alt="About_us"
               style={{ maxWidth: "100%", height: "auto", maxHeight: "50vh" }}
               className="rounded"
             />

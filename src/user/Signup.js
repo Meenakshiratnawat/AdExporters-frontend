@@ -22,10 +22,13 @@ const Signup = () => {
         };
       
         const onSubmit = event => {
+
           event.preventDefault();
           setValues({ ...values, error: false });
+          console.log(event,"data.error in signup")
           signup({ name, email, encry_password })
             .then(data => {
+              console.log(data.error,"data.error")
               if ( data.error) {
                 setValues({ ...values, error: data.error, success: false });
               } else {

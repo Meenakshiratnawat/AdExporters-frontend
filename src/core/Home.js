@@ -16,6 +16,7 @@ const Home = () => {
 
   const loadAllProduct = () => {
     getProducts().then((data) => {
+      console.log(data.error)
       if (data.error) {
         setError(data.error);
       } else {
@@ -25,6 +26,7 @@ const Home = () => {
   };
   const loadAllCategory = () => {
     getCategories().then((data) => {
+      console.log(data.error,"getcategories got hit")
       if (data.error) {
         setError(data.error);
       } else {

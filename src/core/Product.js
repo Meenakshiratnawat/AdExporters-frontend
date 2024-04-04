@@ -27,6 +27,7 @@ const Product = () => {
       }
     });
   };
+console.log(products)
 
   useEffect(() => {
     loadAllProduct();

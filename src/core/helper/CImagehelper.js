@@ -24,6 +24,7 @@ const CImagehelper = ({ category }) => {
   };
 
   const imageurl = getImageUrl(category.name);
+  
   return (
     <div className="rounded p-0 mb-3">
       <div className="position-relative" onClick={goToProduct}>

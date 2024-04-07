@@ -5,6 +5,7 @@ import { signup } from "../auth/helper";
 
 
 const Signup = () => {
+  console.log("singupconsolecall")
 
     
         const [values, setValues] = useState({
@@ -26,10 +27,12 @@ const Signup = () => {
           event.preventDefault();
           setValues({ ...values, error: false });
           console.log(event,"data.error in signup")
+          console.log(values,"singupconsole")
           signup({ name, email, encry_password })
             .then(data => {
               console.log(data.error,"data.error")
               if ( data.error) {
+
                 setValues({ ...values, error: data.error, success: false });
               } else {
                 setValues({

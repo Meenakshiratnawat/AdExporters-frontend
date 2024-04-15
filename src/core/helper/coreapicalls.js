@@ -1,17 +1,19 @@
 import { API } from "../../backend";
 
-export const getProducts = () => {
+export const getProducts = async () => {
   console.log(API);
-  return fetch(`${API}/products`, { method: "GET" })
-    .then((response) => {
-      return response.json();
-    })
-    .catch((err) => console.log(err));
+  try {
+    const response = await fetch(`${API}/products`, { method: "GET" });
+    return await response.json();
+  } catch (err) {
+    return console.log(err);
+  }
 };
-export const getCategories = () => {
-  return fetch(`${API}/categories`, { method: "GET" })
-    .then((response) => {
-      return response.json();
-    })
-    .catch((err) => console.log(err));
+export const getCategories = async () => {
+  try {
+    const response = await fetch(`${API}/categories`, { method: "GET" });
+    return await response.json();
+  } catch (err) {
+    return console.log(err);
+  }
 };

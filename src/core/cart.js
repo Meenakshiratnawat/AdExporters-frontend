@@ -5,7 +5,7 @@ import { API } from "../backend";
 import Card from "./card";
 import { getProducts } from "./helper/coreapicalls";
 import { loadCart } from "./helper/CartHelper";
-import StripeCheckout from "./stripeCheckout";
+import StripeCheckout from "./StripeCheckout";
 
 const Cart = () => {
   const [products, setProducts] = useState([]);

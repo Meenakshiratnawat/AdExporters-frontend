@@ -30,7 +30,6 @@ const Signup = () => {
           console.log(values,"singupconsole")
           signup({ name, email, encry_password })
             .then(data => {
-              console.log(data.error,"data.error")
               if ( data.error) {
 
                 setValues({ ...values, error: data.error, success: false });

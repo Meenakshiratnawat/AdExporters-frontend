@@ -10,12 +10,4 @@
       ]
     }
   ],
-  "routes": [
-    {
-      "src": "/service-worker.js",
-      "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate"
-      }
-    }
-  ]
 }
